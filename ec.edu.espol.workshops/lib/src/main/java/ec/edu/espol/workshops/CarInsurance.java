@@ -4,16 +4,15 @@ public class CarInsurance {
 
 	private int age;
 	private char sex;
-	private boolean status_marital;
-	
+	private boolean statusMarital;
 	private boolean license;
 	
 	// Constructor
-	public CarInsurance(int age, char sex, boolean status_marital, boolean license) {
+	public CarInsurance(int age, char sex, boolean statusMarital, boolean license) {
 		super();
 		this.age = age;
 		this.sex = sex;
-		this.status_marital = status_marital;
+		this.statusMarital = statusMarital;
 		this.license = license;
 	}
 	
@@ -30,24 +29,25 @@ public class CarInsurance {
 	public void setSex(char sex) {
 		this.sex = sex;
 	}
-	public Boolean getStatus_marital() {
-		return status_marital;
+	public Boolean isStatusMarital() {
+		return statusMarital;
 	}
-	public void setStatus_marital(Boolean status_marital) {
-		this.status_marital = status_marital;
+	public void setstatusMarital(Boolean statusMarital) {
+		this.statusMarital = statusMarital;
 	}
-	public boolean getLicense() {
+	public boolean isLicense() {
 		return license;
 	}
 	public void setLicense(boolean license) {
 		this.license = license;
 	}
+
 		
 	public int getPremium(CarInsurance Persona) {
 		int base = 500;
 		if (Persona.getSex() == 'M' && Persona.getStatus_marital() == false  && Persona.getAge() < 25)
 			return base + 1500;
-		else if (getSex() == 'F' || Persona.getStatus_marital())
+		else if (getSex() == 'F' || persona.isStatusMarital())
 			return base - 200;
 		else if (Persona.getAge() > 45  && Persona.getAge() < 65 )
 			return base -100;
@@ -56,11 +56,13 @@ public class CarInsurance {
 		return -1;
 	}
 	
+
 	public static void main() {		
 		CarInsurance Person1 = new CarInsurance(86, 'M', true,true);
 		CarInsurance Person2 = new CarInsurance(50, 'M', false,true);
 		CarInsurance Person3 = new CarInsurance(50, 'M', false,false);
 		CarInsurance Person4 = new CarInsurance(24, 'M', false,true);	
 	}	
+
 	
 }

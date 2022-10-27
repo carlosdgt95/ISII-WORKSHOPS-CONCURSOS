@@ -57,12 +57,13 @@ public class CarInsurance {
 	}
 	
 
-	public static void main() {		
-		CarInsurance Person1 = new CarInsurance(86, 'M', true,true);
-		CarInsurance Person2 = new CarInsurance(50, 'M', false,true);
-		CarInsurance Person3 = new CarInsurance(50, 'M', false,false);
-		CarInsurance Person4 = new CarInsurance(24, 'M', false,true);	
-	}	
-
+	public static void main() {
+		
+		//CarInsurance person1 = new CarInsurance(86,'M',true,true); // No se puede
+		//CarInsurance person2 = new CarInsurance(50,'M',false,true); // Si cumple
+		//CarInsurance person3 = new CarInsurance(50,'M',false,false); // No cumple
+		//CarInsurance person4 = new CarInsurance(24,'M',false,true); // Si cumple
+		
+	}
 	
 }

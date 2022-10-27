@@ -4,17 +4,16 @@ public class CarInsurance {
 
 	private int age;
 	private char sex;
-	private boolean status_marital;
-	
+	private boolean statusMarital;
 	private boolean license;
 	
 	
 	// Constructor
-	public CarInsurance(int age, char sex, boolean status_marital, boolean license) {
+	public CarInsurance(int age, char sex, boolean statusMarital, boolean license) {
 		super();
 		this.age = age;
 		this.sex = sex;
-		this.status_marital = status_marital;
+		this.statusMarital = statusMarital;
 		this.license = license;
 	}
 	
@@ -31,13 +30,13 @@ public class CarInsurance {
 	public void setSex(char sex) {
 		this.sex = sex;
 	}
-	public Boolean getStatus_marital() {
-		return status_marital;
+	public Boolean isStatusMarital() {
+		return statusMarital;
 	}
-	public void setStatus_marital(Boolean status_marital) {
-		this.status_marital = status_marital;
+	public void setstatusMarital(Boolean statusMarital) {
+		this.statusMarital = statusMarital;
 	}
-	public boolean getLicense() {
+	public boolean isLicense() {
 		return license;
 	}
 	public void setLicense(boolean license) {
@@ -46,25 +45,25 @@ public class CarInsurance {
 	
 	
 	// Calculo
-	public int getPremium( CarInsurance Persona) {
+	public int getPremium( CarInsurance persona) {
 		int base = 500;
-		if ( Persona.getSex() == 'M' && Persona.getStatus_marital() == false  && Persona.getAge() < 25)
+		if ( persona.getSex() == 'M' && persona.isStatusMarital() == false  && persona.getAge() < 25)
 			return base + 1500;
-		else if (getSex() == 'F' || Persona.getStatus_marital())
+		else if (getSex() == 'F' || persona.isStatusMarital())
 			return base - 200;
-		else if ( Persona.getAge() > 45  && Persona.getAge() < 65 )
+		else if ( persona.getAge() > 45  && persona.getAge() < 65 )
 			return base -100 ;
-		else if ( Persona.getLicense() == true)
+		else if ( persona.isLicense() == true)
 			return base;
 		return -1;
 	}
 	
 	public static void main() {
 		
-		CarInsurance Person1 = new CarInsurance(86,'M',true,true); // No se puede
-		CarInsurance Person2 = new CarInsurance(50,'M',false,true); // Si cumple
-		CarInsurance Person3 = new CarInsurance(50,'M',false,false); // No cumple
-		CarInsurance Person4 = new CarInsurance(24,'M',false,true); // Si cumple
+		CarInsurance person1 = new CarInsurance(86,'M',true,true); // No se puede
+		CarInsurance person2 = new CarInsurance(50,'M',false,true); // Si cumple
+		CarInsurance person3 = new CarInsurance(50,'M',false,false); // No cumple
+		CarInsurance person4 = new CarInsurance(24,'M',false,true); // Si cumple
 		
 	}
 	

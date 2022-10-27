@@ -7,7 +7,6 @@ public class CarInsurance {
 	private boolean statusMarital;
 	private boolean license;
 	
-	
 	// Constructor
 	public CarInsurance(int age, char sex, boolean statusMarital, boolean license) {
 		super();
@@ -42,22 +41,22 @@ public class CarInsurance {
 	public void setLicense(boolean license) {
 		this.license = license;
 	}
-	
-	
-	// Calculo
-	public int getPremium( CarInsurance persona) {
+
+		
+	public int getPremium(CarInsurance Persona) {
 		int base = 500;
-		if ( persona.getSex() == 'M' && persona.isStatusMarital() == false  && persona.getAge() < 25)
+		if (Persona.getSex() == 'M' && Persona.getStatus_marital() == false  && Persona.getAge() < 25)
 			return base + 1500;
 		else if (getSex() == 'F' || persona.isStatusMarital())
 			return base - 200;
-		else if ( persona.getAge() > 45  && persona.getAge() < 65 )
-			return base -100 ;
-		else if ( persona.isLicense() == true)
+		else if (Persona.getAge() > 45  && Persona.getAge() < 65 )
+			return base -100;
+		else if (Persona.getLicense() == true)
 			return base;
 		return -1;
 	}
 	
+
 	public static void main() {
 		
 		//CarInsurance person1 = new CarInsurance(86,'M',true,true); // No se puede
@@ -67,5 +66,4 @@ public class CarInsurance {
 		
 	}
 	
-
 }

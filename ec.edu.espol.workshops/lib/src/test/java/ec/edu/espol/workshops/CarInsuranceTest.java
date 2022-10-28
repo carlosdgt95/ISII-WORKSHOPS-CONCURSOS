@@ -34,5 +34,20 @@ public class CarInsuranceTest {
     	// Test case - 006
     	CarInsurance person6 = new CarInsurance(20,'M',true, false) ;
     	assertEquals(-1 , CarInsurance.getPremium(person6));
+    	
+    	
+    	// Test case - 007
+    	CarInsurance person7 = new CarInsurance(45,'H',false, false) ;
+    	assertEquals(-1 , CarInsurance.getPremium(person7));
+    	
+    	
+    	// Test case - 008
+    	CarInsurance person8 = new CarInsurance(50,'M',true, true) ;
+    	assertEquals(-1 , CarInsurance.getPremium(person8));
+    	
+    	
+    	// Test case - 009
+    	CarInsurance person9 = new CarInsurance(20,'M',true, false) ;
+    	assertEquals(-1 , CarInsurance.getPremium(person9));
     }
 }

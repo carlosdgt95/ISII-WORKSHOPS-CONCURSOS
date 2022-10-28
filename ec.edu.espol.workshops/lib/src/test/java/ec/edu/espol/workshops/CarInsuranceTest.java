@@ -49,5 +49,6 @@ public class CarInsuranceTest {
     	// Test case - 009
     	CarInsurance person9 = new CarInsurance(20,'M',true, false) ;
     	assertEquals(-1 , CarInsurance.getPremium(person9));
+    	
     }
 }

@@ -45,14 +45,16 @@ public class CarInsurance {
 		
 	public static int getPremium(CarInsurance Persona) {
 		int base = 500;
-		if (Persona.getSex() == 'M' && Persona.isStatusMarital() == false  && Persona.getAge() < 25)
+		
+		if (Persona.getSex() == 'M' && Persona.isStatusMarital() == false  && Persona.getAge() < 25 && Persona.isLicense() == true)
 			return base + 1500;
-		else if (Persona.getSex() == 'F' || Persona.isStatusMarital())
+		else if (Persona.getSex() == 'F' || Persona.isStatusMarital()  && Persona.isLicense() == true)
 			return base - 200;
-		else if (Persona.getAge() > 45  && Persona.getAge() < 65 )
+		else if (Persona.getAge() > 45  && Persona.getAge() < 65  && Persona.isLicense() == true)
 			return base -100;
-		else if (Persona.isLicense() == true)
-			return base;
+		else if (Persona.getAge() > 80  && Persona.isLicense() == false)
+			return -1;
+		
 		return -1;
 	}
 	

@@ -67,6 +67,51 @@ public class StepsDefs {
 	 public void citizen_over_20() {
 	 person1.getAge();
 	 }
+	
+	
+	@When("calculate the insurance premium")
+	 public void calculate_premium1() {
+	 actualAnswer = CarInsurance.getPremium(person1);
+	 }
+
+	
+	 @Then("we should receive 2000")
+	 public void should_receive1() {
+		assertEquals(-1, actualAnswer);
+	 }
+	 
+	 @When("calculate the insurance premium")
+	 public void calculate_premium2() {
+	 actualAnswer = CarInsurance.getPremium(person2);
+	 }
+
+	
+	 @Then("we should receive 400")
+	 public void should_receive2() {
+		assertEquals(400, actualAnswer);
+	 }
+	 
+	 @When("calculate the insurance premium")
+	 public void calculate_premium3() {
+	 actualAnswer = CarInsurance.getPremium(person5);
+	 }
+
+	
+	 @Then("we should receive 300")
+	 public void should_receive3() {
+		assertEquals(300, actualAnswer);
+	 }
+	 
+	 @When("calculate the insurance premium")
+	 public void calculate_premium4() {
+	 actualAnswer = CarInsurance.getPremium(person4);
+	 }
+
+	
+	 @Then("we should receive 2000")
+	 public void should_receive4() {
+		assertEquals(2000, actualAnswer);
+	 }
 
 	@When("calculate the insurance premium")
 	 public void calculate_premium5() {
@@ -74,9 +119,9 @@ public class StepsDefs {
 	 }
 
 	
-	 @Then("we should receive 2000")
+	 @Then("we should receive 200")
 	 public void should_receive5() {
-		assertEquals(2000, actualAnswer);
+		assertEquals(200, actualAnswer);
 	 }
  
 }

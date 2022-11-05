@@ -45,13 +45,14 @@ Given: 20, M ,true,false
 When: calculate the insurance premium
 Then: I should be show -1
 
+
 Scenario Outline: The total value of insurance for the costumer.
-Given: "<age>", "<gender>", "<married_status>" , "<hasLicense>"
+Given: "<age>", "<sex>", "<statusMarital>" , "<hasLicense>"
 When: Call the getPremium function
 Then: I should be show "<value>"
 
 Examples:
-|age	|gender	|married_status	|hasLicense	|value|
+|age	|sex	|statusMarital	|hasLicense	|value|
 |86	|H	|true	|true	|-1|
 |45	|H	|false	|false	|400|
 |26	|H	|false	|false	|300|
@@ -61,8 +62,3 @@ Examples:
 |45	|F	|false	|false	|-1|
 |50	|M	|true	|true	|200|
 |20	|F	|true	|false	|-1|
-
-
-
-
-

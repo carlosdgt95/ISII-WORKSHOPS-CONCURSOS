@@ -1,6 +1,5 @@
-package ec.edu.espol.workshops;
+ppackage ec.edu.espol.workshops;
 
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
@@ -15,59 +14,6 @@ public class StepsDefs {
 	 private CarInsurance person4 = new CarInsurance(21,'H',false, true);
 	 private CarInsurance person5 = new CarInsurance(60,'H',true, true);
 
-	@Given("citizen over 30 years old")
-	 public void citizen_over_30() {
-	 person1.getAge();
-	 }
-
-	@When("calculate the insurance premium")
-	 public void calculate_premium() {
-	 actualAnswer = CarInsurance.getPremium(person1);
-	 }
-
-	
-	 @Then("we should receive -1")
-	 public void should_receive() {
-		assertEquals(0, actualAnswer);
-	 }
-	
-	@Given("citizen over 50 years old")
-	public void citizen_over_50() {
-		person2.getAge();
-	}
-	 
-	@Given("is a man")
-	public void is_man() {
-		person2.getSex();
-	}
-		
-	@Given("is married")
-	public void is_married() {
-		person2.isStatusMarital();
-	}
-
-	
-	@Given("citizen over 25 years old")
-	public void citizen_over_25() {
-		person3.getAge();
-	}
-	 
-	@Given("is a women")
-	public void is_women() {
-		person3.getSex();
-	}
-		
-	@Given("is married 3")
-	public void is_married3() {
-		person3.isStatusMarital();
-	}
-	
-	
-	@Given("citizen over 30 years old")
-	 public void citizen_over_20() {
-	 person1.getAge();
-	 }
-	
 	
 	@When("calculate the insurance premium")
 	 public void calculate_premium1() {
@@ -93,7 +39,7 @@ public class StepsDefs {
 	 
 	 @When("calculate the insurance premium")
 	 public void calculate_premium3() {
-	 actualAnswer = CarInsurance.getPremium(person5);
+	 actualAnswer = CarInsurance.getPremium(person3);
 	 }
 
 	

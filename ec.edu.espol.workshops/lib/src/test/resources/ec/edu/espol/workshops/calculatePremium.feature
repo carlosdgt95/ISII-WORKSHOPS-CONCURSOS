@@ -6,53 +6,53 @@ When: calculate the insurance premium
 Then: I should be show -1
 
 Scenario: The costumer is an 45-year-old man, single and without a license. 
-Given: 45 ,H , false, false
+Given: 45, H, false, false
 When: calculate the insurance premium
 Then: I should be show 400
 
 Scenario:The costumer is an 26-year-old woman, single and licensed. 
-Given: 26 , M ,  false , true
+Given: 26, M, false, true
 When: calculate the insurance premium
 Then: I should be show 300
 
 Scenario: The costumer is an 21-year-old male, single and licensed. 
-Given: 21,  H,  false, true
+Given: 21, H, false, true
 When: calculate the insurance premium
 Then: I should be show 2000
 
 Scenario: The costumer is an Male, 60 years old, married and licensed. 
-Given: 60, H ,  true, true
+Given: 60, H, true, true
 When: calculate the insurance premium
 Then: I should be show 200
 
 Scenario: The costumer is an 20 year old married woman without a license. 
-Given: 20, M,  true, false
+Given: 20, M, true, false
 When: calculate the insurance premium
 Then: I should be show -1
 
 Scenario: The costumer is an 45 year old single man without a license. 
-Given: 45, F ,false,false
+Given: 45, F, false, false
 When: calculate the insurance premium
 Then: I should be show -1
 
 Scenario:The costumer is an 50 year old married woman on leave. 
-Given: 50, M ,true,true
+Given: 50, M, true, true
 When: calculate the insurance premium
 Then: I should be show 200
 
 Scenario: The costumer is an 20-year-old woman, married and without a license. 
-Given: 20, M ,true,false
+Given: 20, M, true, false
 When: calculate the insurance premium
 Then: I should be show -1
 
 
 Scenario Outline: The total value of insurance for the costumer.
-Given: "<age>", "<sex>", "<statusMarital>" , "<hasLicense>"
+Given: "<age>", "<sex>", "<statusMarital>", "<license>"
 When: Call the getPremium function
 Then: I should be show "<value>"
 
 Examples:
-|age	|sex	|statusMarital	|hasLicense	|value|
+|age	|sex	|statusMarital	|license	|value|
 |86	|H	|true	|true	|-1|
 |45	|H	|false	|false	|400|
 |26	|H	|false	|false	|300|

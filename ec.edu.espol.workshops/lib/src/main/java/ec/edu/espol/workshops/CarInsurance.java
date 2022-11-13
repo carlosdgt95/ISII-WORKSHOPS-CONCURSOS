@@ -18,6 +18,21 @@ public class CarInsurance {
 		this.license = license;
 	}
 	
+	
+	public CarInsurance(int age) {
+		super();
+		this.age = age;
+	
+	}
+	
+	
+	public CarInsurance(int age, String sex, boolean license) {
+		super();
+		this.age = age;
+		this.sex = sex;
+		this.license = license;
+	}
+	
 	// Getters And Setters
 	public int getAge() {
 		return age;
@@ -62,6 +77,14 @@ public class CarInsurance {
 	
 
 	public static void main(String[] args) {
+		
+		
+		CarInsurance person1 = new CarInsurance(18); // No cumple
+		System.out.println("get Premium: " +getPremium(person1));
+				
+		CarInsurance person2 = new CarInsurance(20,"NB",true); // No cumple
+		System.out.println("get Premium: " +getPremium(person1));
+
 		Scanner sc = new Scanner (System.in);
 		
 		System.out.println("Ingrese su edad: ");
@@ -77,13 +100,11 @@ public class CarInsurance {
 		Boolean licencia = sc.nextBoolean();
 		
 		CarInsurance person = new CarInsurance(edad,sexo,estaus,licencia);
-
-		System.out.println("get Premium: " +getPremium(person));
-		//CarInsurance person1 = new CarInsurance(86,'M',true,true); // No se puede
-		//CarInsurance person2 = new CarInsurance(50,'M',false,true); // Si cumple
-		//CarInsurance person3 = new CarInsurance(50,'M',false,false); // No cumple
-		//CarInsurance person4 = new CarInsurance(24,'M',false,true); // Si cumple
 		
+		System.out.println("get Premium: " +getPremium(person));
+		
+		
+
 	}
 	
 }

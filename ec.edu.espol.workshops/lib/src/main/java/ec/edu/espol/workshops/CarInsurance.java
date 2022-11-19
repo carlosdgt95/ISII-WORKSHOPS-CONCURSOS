@@ -59,11 +59,17 @@ public class CarInsurance {
 
 	public static void main() {
 		
-		//CarInsurance person1 = new CarInsurance(86,'M',true,true); // No se puede
+		CarInsurance person1 = new CarInsurance(86,'M',true,true); // No se puede
 		//CarInsurance person2 = new CarInsurance(50,'M',false,true); // Si cumple
 		//CarInsurance person3 = new CarInsurance(50,'M',false,false); // No cumple
 		//CarInsurance person4 = new CarInsurance(24,'M',false,true); // Si cumple
-		
+		CarInsurance person2 = new CarInsurance(18, 'M', false, true); 
+		CarInsurance person3 = new CarInsurance(19, 'M', “true”, “true”) 
+		CarInsurance person4 = new CarInsurance(17, 'F', “false”, “false”) 
+		CarInsurance person5 = new CarInsurance(45, 'M', “false”, “true”) 
+		CarInsurance person6 = new CarInsurance(79, 'F', “false”, “true”) 
+		CarInsurance person7 = new CarInsurance(80, 'M', “true”, “true”) 
+		CarInsurance person8 = new CarInsurance(81, 'M', “false”, “true”) 
 	}
 	
 }

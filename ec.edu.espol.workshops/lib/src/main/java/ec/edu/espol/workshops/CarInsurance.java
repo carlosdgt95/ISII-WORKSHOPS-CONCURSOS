@@ -44,7 +44,7 @@ public class CarInsurance {
 
 		
 	public static int getPremium(CarInsurance Persona) {
-		int base = 500;
+		int base = 600;
 		
 		if (Persona.getSex() == 'M' && Persona.isStatusMarital() == false  && Persona.getAge() < 25 && Persona.isLicense() == true)
 			return base + 1500;
